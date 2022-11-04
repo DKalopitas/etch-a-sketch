@@ -32,7 +32,7 @@ body {
     background-color: rgb(150, 150, 150);
 }
 
-.grid-container {
+#grid-container {
     height: 100%;
     display: grid;
 }

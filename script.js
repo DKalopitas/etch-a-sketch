@@ -1,6 +1,8 @@
 function createGrid(columns = 16) {
-    const gridContainer = document.querySelector('.grid-container');
-    document.getElementById('temp').style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+    const gridContainer = document.querySelector('#grid-container');
+    document.getElementById('grid-container').style.gridTemplateColumns = 
+        `repeat(${columns}, 1fr)`;
+
     for (let i = 0; i < columns; i++) {
         for (let j = 0; j < columns; j++) {
             const div = document.createElement('div');
@@ -11,7 +13,7 @@ function createGrid(columns = 16) {
 }
 
 function removeGrid() {
-    const gridContainer = document.querySelector('.grid-container');
+    const gridContainer = document.querySelector('#grid-container');
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach(gridItem => gridContainer.removeChild(gridItem));
 }
