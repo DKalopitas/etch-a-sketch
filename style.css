@@ -36,7 +36,3 @@ body {
     height: 100%;
     display: grid;
 }
-
-.hovered {
-    background-color: darkslategray;
-}
