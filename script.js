@@ -39,12 +39,12 @@ function changeColor() {
     gridItems.forEach(gridItem => gridItem.addEventListener('mouseover', ()=> {
         const id = gridItem.getAttribute('id');
         const item = document.getElementById(id);
-        if (gridItem.getAttribute('class') === 'grid-item hovered') {
+        if (item.getAttribute('class') !== 'grid-item') {
             let rgb =  window.getComputedStyle(item).backgroundColor;
             rgb = rgb.replace(/[^\d,]/g, '').split(',');
-            const r = Math.floor(rgb[0] * 0.8);
-            const g = Math.floor(rgb[1] * 0.8);
-            const b = Math.floor(rgb[2] * 0.8);
+            const r = Math.floor(rgb[0] * 0.6);
+            const g = Math.floor(rgb[1] * 0.6);
+            const b = Math.floor(rgb[2] * 0.6);
             console.log(r);
             document.getElementById(id).style.backgroundColor = 
                 `rgb(${r}, ${g}, ${b})`;
@@ -54,6 +54,7 @@ function changeColor() {
             const b = Math.floor(Math.random() * (255 - 10 + 1) + 10);
             item.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             item.classList.add('hovered');
+            
         }
     }));
 }
